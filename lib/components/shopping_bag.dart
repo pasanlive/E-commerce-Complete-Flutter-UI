@@ -25,6 +25,7 @@ class ShoppingBag extends StatelessWidget {
             numOfItem == null
                 ? "assets/icons/Bag.svg"
                 : "assets/icons/bag_full.svg",
+            package: imagePackageName,
             height: 24,
             width: 24,
             colorFilter: ColorFilter.mode(

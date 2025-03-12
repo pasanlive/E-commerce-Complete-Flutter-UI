@@ -88,6 +88,7 @@ class BannerMStyle4 extends StatelessWidget {
                   ),
                   child: SvgPicture.asset(
                     "assets/icons/Arrow - Right.svg",
+                    package: imagePackageName,
                     colorFilter:
                         const ColorFilter.mode(Colors.black, BlendMode.srcIn),
                   ),

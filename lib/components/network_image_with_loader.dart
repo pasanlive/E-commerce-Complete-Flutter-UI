@@ -10,7 +10,7 @@ class NetworkImageWithLoader extends StatelessWidget {
   const NetworkImageWithLoader(
     this.src, {
     super.key,
-    this.fit = BoxFit.cover,
+    this.fit = BoxFit.fitHeight,
     this.radius = defaultPadding,
   });
 
@@ -20,7 +20,7 @@ class NetworkImageWithLoader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.all(Radius.circular(radius)),
+      borderRadius: BorderRadius.only(topRight: Radius.circular(radius), bottomLeft: Radius.zero, topLeft: Radius.circular(radius), bottomRight: Radius.zero,),
       child: CachedNetworkImage(
         fit: fit,
         imageUrl: src,

@@ -6,8 +6,10 @@ import 'package:shop/route/screen_export.dart';
 import '../../../../constants.dart';
 
 class PopularProducts extends StatelessWidget {
+  final Function(ProductModel product) onPress;
   const PopularProducts({
-    super.key,
+    super.key, required this.onPress,
+
   });
 
   @override
@@ -26,7 +28,7 @@ class PopularProducts extends StatelessWidget {
         // While loading use 👇
         // const ProductsSkelton(),
         SizedBox(
-          height: 220,
+          height: productCardBlockHeight,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             // Find demoPopularProducts on models/ProductModel.dart
@@ -46,13 +48,13 @@ class PopularProducts extends StatelessWidget {
                 priceAfetDiscount: demoPopularProducts[index].priceAfetDiscount,
                 dicountpercent: demoPopularProducts[index].dicountpercent,
                 press: () {
-                  Navigator.pushNamed(context, productDetailsScreenRoute,
-                      arguments: index.isEven);
+                  onPress(demoPopularProducts[index]);
                 },
               ),
             ),
           ),
-        )
+        ),
+        const SizedBox(height: defaultPadding),
       ],
     );
   }

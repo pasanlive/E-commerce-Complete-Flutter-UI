@@ -29,13 +29,13 @@ class SecondaryProductCard extends StatelessWidget {
       onPressed: () {},
       style: style ??
           OutlinedButton.styleFrom(
-              minimumSize: const Size(256, 114),
-              maximumSize: const Size(256, 114),
+              minimumSize: const Size(330, 200),
+              maximumSize: const Size(330, 200),
               padding: const EdgeInsets.all(8)),
       child: Row(
         children: [
           AspectRatio(
-            aspectRatio: 1.15,
+            aspectRatio: 0.75,
             child: Stack(
               children: [
                 NetworkImageWithLoader(image, radius: defaultBorderRadious),

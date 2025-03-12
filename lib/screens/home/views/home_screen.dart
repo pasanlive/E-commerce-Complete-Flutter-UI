@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
         child: CustomScrollView(
           slivers: [
             const SliverToBoxAdapter(child: OffersCarouselAndCategories()),
-            const SliverToBoxAdapter(child: PopularProducts()),
+            SliverToBoxAdapter(child: PopularProducts(onPress: (item) {},)),
             const SliverPadding(
               padding: EdgeInsets.symmetric(vertical: defaultPadding * 1.5),
               sliver: SliverToBoxAdapter(child: FlashSale()),

@@ -26,7 +26,7 @@ class BestSellers extends StatelessWidget {
         // While loading use 👇
         // const ProductsSkelton(),
         SizedBox(
-          height: 220,
+          height: productCardBlockHeight,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             // Find demoBestSellersProducts on models/ProductModel.dart

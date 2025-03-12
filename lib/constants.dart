@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
 // Just for demo
-const productDemoImg1 = "https://i.imgur.com/CGCyp1d.png";
-const productDemoImg2 = "https://i.imgur.com/AkzWQuJ.png";
-const productDemoImg3 = "https://i.imgur.com/J7mGZ12.png";
-const productDemoImg4 = "https://i.imgur.com/q9oF9Yq.png";
-const productDemoImg5 = "https://i.imgur.com/MsppAcx.png";
-const productDemoImg6 = "https://i.imgur.com/JfyZlnO.png";
+const productDemoImg1 = "https://firebasestorage.googleapis.com/v0/b/upside-publications.firebasestorage.app/o/images%2Fbook_3.png?alt=media&token=788da401-d8bb-4668-ab0f-f89feb1ca291";
+const productDemoImg2 = "https://firebasestorage.googleapis.com/v0/b/upside-publications.firebasestorage.app/o/images%2Fbook_1.png?alt=media&token=fee46fdb-a355-4bdf-ad6f-104ebe086229";
+const productDemoImg3 = "https://firebasestorage.googleapis.com/v0/b/upside-publications.firebasestorage.app/o/images%2Fbook_2.png?alt=media&token=b4267a88-2e88-436e-bb81-e03e1f664991";
+const productDemoImg4 = "https://firebasestorage.googleapis.com/v0/b/upside-publications.firebasestorage.app/o/images%2Fbook_4.png?alt=media&token=e46c44f1-8750-43e7-8bfe-dfad5f3816c1";
+const productDemoImg5 = "https://firebasestorage.googleapis.com/v0/b/upside-publications.firebasestorage.app/o/images%2Fbook_5.png?alt=media&token=38023246-c73b-4881-92f1-959209210dca";
+const productDemoImg6 = "https://firebasestorage.googleapis.com/v0/b/upside-publications.firebasestorage.app/o/images%2Fbook_3.png?alt=media&token=788da401-d8bb-4668-ab0f-f89feb1ca291";
 
 // End For demo
 
@@ -79,3 +79,7 @@ final emaildValidator = MultiValidator([
 ]);
 
 const pasNotMatchErrorText = "passwords do not match";
+
+const imagePackageName =  "shop";
+
+const productCardBlockHeight = 400.0;

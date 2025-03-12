@@ -52,6 +52,7 @@ class ProductDetailsScreen extends StatelessWidget {
                 IconButton(
                   onPressed: () {},
                   icon: SvgPicture.asset("assets/icons/Bookmark.svg",
+                      package: imagePackageName,
                       color: Theme.of(context).textTheme.bodyLarge!.color),
                 ),
               ],

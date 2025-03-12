@@ -133,6 +133,7 @@ class _OnBordingScreenState extends State<OnBordingScreen> {
                       ),
                       child: SvgPicture.asset(
                         "assets/icons/Arrow - Right.svg",
+                        package: imagePackageName,
                         colorFilter: const ColorFilter.mode(
                           Colors.white,
                           BlendMode.srcIn,

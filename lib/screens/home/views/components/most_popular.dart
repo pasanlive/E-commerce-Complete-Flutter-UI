@@ -26,7 +26,7 @@ class MostPopular extends StatelessWidget {
         // While loading use 👇
         // SeconderyProductsSkelton(),
         SizedBox(
-          height: 114,
+          height: 200,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             // Find demoPopularProducts on models/ProductModel.dart
@@ -52,7 +52,8 @@ class MostPopular extends StatelessWidget {
               ),
             ),
           ),
-        )
+        ),
+        const SizedBox(height: defaultPadding),
       ],
     );
   }
