@@ -67,7 +67,7 @@ class WalletHistoryCard extends StatelessWidget {
                   right: defaultPadding),
               child: SecondaryProductCard(
                 image: products[index].image,
-                brandName: products[index].brandName,
+                brandName: products[index].author,
                 title: products[index].title,
                 price: products[index].price,
                 priceAfetDiscount: products[index].priceAfetDiscount,
