@@ -19,13 +19,15 @@ class BannerMStyle4 extends StatelessWidget {
   final String title;
   final String? subtitle;
   final int discountParcent;
-  final VoidCallback press;
+  final Function(BuildContext context) press;
 
   @override
   Widget build(BuildContext context) {
     return BannerM(
       image: image!,
-      press: press,
+      press: () {
+        press(context);
+      },
       children: [
         Padding(
           padding: const EdgeInsets.all(defaultPadding),
@@ -81,7 +83,9 @@ class BannerMStyle4 extends StatelessWidget {
                 height: 48,
                 width: 48,
                 child: ElevatedButton(
-                  onPressed: press,
+                  onPressed: () {
+                    press(context);
+                  },
                   style: ElevatedButton.styleFrom(
                     shape: const CircleBorder(),
                     backgroundColor: Colors.white,

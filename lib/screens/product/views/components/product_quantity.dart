@@ -19,10 +19,6 @@ class ProductQuantity extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          "Quantity",
-          style: Theme.of(context).textTheme.titleSmall,
-        ),
         const SizedBox(height: defaultPadding),
         Row(
           children: [
@@ -35,7 +31,7 @@ class ProductQuantity extends StatelessWidget {
                     padding: const EdgeInsets.all(defaultPadding / 2)),
                 child: SvgPicture.asset(
                   "assets/icons/Minus.svg",
-                  color: Theme.of(context).iconTheme.color,
+                  color: Colors.white,
                 ),
               ),
             ),
@@ -47,7 +43,7 @@ class ProductQuantity extends StatelessWidget {
                   style: Theme.of(context)
                       .textTheme
                       .titleMedium!
-                      .copyWith(fontWeight: FontWeight.w500),
+                      .copyWith(fontWeight: FontWeight.w500, color: Colors.white),
                 ),
               ),
             ),
@@ -60,7 +56,7 @@ class ProductQuantity extends StatelessWidget {
                     padding: const EdgeInsets.all(defaultPadding / 2)),
                 child: SvgPicture.asset(
                   "assets/icons/Plus1.svg",
-                  color: Theme.of(context).iconTheme.color,
+                  color: Colors.white,
                 ),
               ),
             ),

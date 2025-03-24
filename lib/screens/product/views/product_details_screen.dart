@@ -27,6 +27,8 @@ class ProductDetailsScreen extends StatelessWidget {
       bottomNavigationBar: isProductAvailable
           ? CartButton(
               price: 140,
+              onIncrement: () {},
+              onDecrement: () {},
               press: () {
                 customModalBottomSheet(
                   context,
@@ -68,6 +70,9 @@ class ProductDetailsScreen extends StatelessWidget {
                   "A cool gray cap in soft corduroy. Watch me.' By buying cotton products from Lindex, you’re supporting more responsibly...",
               rating: 4.4,
               numOfReviews: 126,
+              price: 140,
+              priceAfetDiscount: 120,
+              discountPercent: 25,
             ),
             ProductListTile(
               svgSrc: "assets/icons/Product.svg",

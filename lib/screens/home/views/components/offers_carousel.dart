@@ -25,31 +25,33 @@ class _OffersCarouselState extends State<OffersCarousel> {
 
   // Offers List
   List offers = [
-    BannerMStyle1(
-      text: "New items with \nFree shipping",
-      image: "https://firebasestorage.googleapis.com/v0/b/upside-publications.firebasestorage.app/o/images%2Fbanners%2Fupside_banner_1.jpg?alt=media&token=feae0311-8061-48ec-94f6-8019cff48894",
-      press: () {},
-    ),
-    BannerMStyle2(
-      title: "Black \nfriday",
-      subtitle: "Collection",
-      discountParcent: 50,
-      image: "https://firebasestorage.googleapis.com/v0/b/upside-publications.firebasestorage.app/o/images%2Fbanners%2Fvintage-themed_banner.jpg?alt=media&token=c443a7a7-8e5d-4bd5-a3db-d831b1d82ef5",
-      press: () {},
-    ),
-    BannerMStyle3(
-      title: "Grab \nyours now",
-      discountParcent: 50,
-      image: "https://firebasestorage.googleapis.com/v0/b/upside-publications.firebasestorage.app/o/images%2Fbanners%2Fsleek_and_minimalist_banner.jpg?alt=media&token=d3461709-975a-48fb-8acb-deeb0f5a8e23",
-      press: () {},
-    ),
+    // BannerMStyle1(
+    //   text: "Upside Books",
+    //   image: "https://firebasestorage.googleapis.com/v0/b/upside-publications.firebasestorage.app/o/images%2Fbanners%2Fupside_banner_1.jpg?alt=media&token=feae0311-8061-48ec-94f6-8019cff48894",
+    //   press: () {},
+    // ),
+    // BannerMStyle2(
+    //   title: "Black \nfriday",
+    //   subtitle: "Collection",
+    //   discountParcent: 50,
+    //   image: "https://firebasestorage.googleapis.com/v0/b/upside-publications.firebasestorage.app/o/images%2Fbanners%2Fvintage-themed_banner.jpg?alt=media&token=c443a7a7-8e5d-4bd5-a3db-d831b1d82ef5",
+    //   press: () {},
+    // ),
+    // BannerMStyle3(
+    //   title: "Grab \nyours now",
+    //   discountParcent: 50,
+    //   image: "https://firebasestorage.googleapis.com/v0/b/upside-publications.firebasestorage.app/o/images%2Fbanners%2Fsleek_and_minimalist_banner.jpg?alt=media&token=d3461709-975a-48fb-8acb-deeb0f5a8e23",
+    //   press: () {},
+    // ),
     BannerMStyle4(
       // image: , user your image
-      title: "SUMMER \nSALE",
-      subtitle: "SPECIAL OFFER",
+      title: "Yashodha Sammani's \ntwo new books",
+      subtitle: "PRE ORDER",
       image: "https://firebasestorage.googleapis.com/v0/b/upside-publications.firebasestorage.app/o/images%2Fbanners%2Fmodern_banne.jpg?alt=media&token=5341f88f-167c-45c3-8b08-aebcbf27b59d",
-      discountParcent: 80,
-      press: () {},
+      discountParcent: 50,
+      press: (BuildContext context) {
+
+      },
     ),
   ];
 
@@ -94,6 +96,7 @@ class _OffersCarouselState extends State<OffersCarousel> {
                 _selectedIndex = index;
               });
             },
+
             itemBuilder: (context, index) => offers[index],
           ),
           FittedBox(

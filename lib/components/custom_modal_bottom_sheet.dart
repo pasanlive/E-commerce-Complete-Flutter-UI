@@ -14,15 +14,18 @@ Future<dynamic> customModalBottomSheet(
     isScrollControlled: true,
     isDismissible: isDismissible,
     enableDrag: isDismissible,
+    constraints: const BoxConstraints(
+      maxWidth:  1000,
+    ),
     backgroundColor: Theme.of(context).scaffoldBackgroundColor,
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.only(
-        topLeft: Radius.circular(defaultBorderRadious * 2),
-        topRight: Radius.circular(defaultBorderRadious * 2),
+        topLeft: Radius.circular(4),
+        topRight: Radius.circular(4),
       ),
     ),
     builder: (context) => SizedBox(
-      height: height ?? MediaQuery.of(context).size.height * 0.75,
+      height: height ?? MediaQuery.of(context).size.height * 0.9,
       child: child,
     ),
   );

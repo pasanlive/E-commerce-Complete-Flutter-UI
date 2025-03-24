@@ -29,6 +29,8 @@ class _ProductBuyNowScreenState extends State<ProductBuyNowScreen> {
         price: 269.4,
         title: "Add to cart",
         subTitle: "Total price",
+        onIncrement: () {},
+        onDecrement: () {},
         press: () {
           customModalBottomSheet(
             context,
@@ -59,20 +61,18 @@ class _ProductBuyNowScreenState extends State<ProductBuyNowScreen> {
             ),
           ),
           Expanded(
-            child: CustomScrollView(
-              slivers: [
-                const SliverToBoxAdapter(
-                  child: Padding(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  const Padding(
                     padding: EdgeInsets.symmetric(horizontal: defaultPadding),
                     child: AspectRatio(
                       aspectRatio: 1.05,
                       child: NetworkImageWithLoader(productDemoImg1),
                     ),
                   ),
-                ),
-                SliverPadding(
-                  padding: const EdgeInsets.all(defaultPadding),
-                  sliver: SliverToBoxAdapter(
+                  Padding(
+                    padding: const EdgeInsets.all(defaultPadding),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -90,80 +90,10 @@ class _ProductBuyNowScreenState extends State<ProductBuyNowScreen> {
                       ],
                     ),
                   ),
-                ),
-                const SliverToBoxAdapter(child: Divider()),
-                SliverToBoxAdapter(
-                  child: SelectedColors(
-                    colors: const [
-                      Color(0xFFEA6262),
-                      Color(0xFFB1CC63),
-                      Color(0xFFFFBF5F),
-                      Color(0xFF9FE1DD),
-                      Color(0xFFC482DB),
-                    ],
-                    selectedColorIndex: 2,
-                    press: (value) {},
-                  ),
-                ),
-                SliverToBoxAdapter(
-                  child: SelectedSize(
-                    sizes: const ["S", "M", "L", "XL", "XXL"],
-                    selectedIndex: 1,
-                    press: (value) {},
-                  ),
-                ),
-                SliverPadding(
-                  padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-                  sliver: ProductListTile(
-                    title: "Size guide",
-                    svgSrc: "assets/icons/Sizeguid.svg",
-                    isShowBottomBorder: true,
-                    press: () {
-                      customModalBottomSheet(
-                        context,
-                        height: MediaQuery.of(context).size.height * 0.9,
-                        child: const SizeGuideScreen(),
-                      );
-                    },
-                  ),
-                ),
-                SliverPadding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: defaultPadding),
-                  sliver: SliverToBoxAdapter(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: defaultPadding / 2),
-                        Text(
-                          "Store pickup availability",
-                          style: Theme.of(context).textTheme.titleSmall,
-                        ),
-                        const SizedBox(height: defaultPadding / 2),
-                        const Text(
-                            "Select a size to check store availability and In-Store pickup options.")
-                      ],
-                    ),
-                  ),
-                ),
-                SliverPadding(
-                  padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-                  sliver: ProductListTile(
-                    title: "Check stores",
-                    svgSrc: "assets/icons/Stores.svg",
-                    isShowBottomBorder: true,
-                    press: () {
-                      customModalBottomSheet(
-                        context,
-                        height: MediaQuery.of(context).size.height * 0.92,
-                        child: const LocationPermissonStoreAvailabilityScreen(),
-                      );
-                    },
-                  ),
-                ),
-                const SliverToBoxAdapter(
-                    child: SizedBox(height: defaultPadding))
-              ],
+                  const Divider(),
+                  const SizedBox(height: defaultPadding)
+                ],
+              ),
             ),
           )
         ],
