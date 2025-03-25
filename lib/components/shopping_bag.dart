@@ -16,7 +16,8 @@ class ShoppingBag extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      onPressed: () {},
+      onPressed: () {
+      },
       icon: Stack(
         alignment: Alignment.center,
         clipBehavior: Clip.none,
