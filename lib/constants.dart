@@ -82,4 +82,4 @@ const pasNotMatchErrorText = "passwords do not match";
 
 const imagePackageName =  "shop";
 
-const productCardBlockHeight = 400.0;
+const productCardBlockHeight = 420.0;
