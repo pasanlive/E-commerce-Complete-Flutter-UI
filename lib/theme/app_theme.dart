@@ -16,7 +16,7 @@ class AppTheme {
       scaffoldBackgroundColor: Colors.white,
       iconTheme: const IconThemeData(color: blackColor),
       textTheme: const TextTheme(
-        bodyMedium: TextStyle(color: blackColor40),
+        bodyMedium: TextStyle(color: Colors.black),
       ),
       elevatedButtonTheme: elevatedButtonThemeData,
       textButtonTheme: textButtonThemeData,
